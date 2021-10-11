@@ -1,0 +1,65 @@
+@import "variables";
+@import "media";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.text {
+  font-size: 16px;
+  color: $color-white;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  font-family: "Open Sans Condensed", sans-serif;
+  &--gold {
+    color: $color-gold;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--little {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 150%;
+    font-family: "Open Sans", sans-serif;
+    //default letter-spacing?
+    letter-spacing: 1em;
+  }
+  &--big {
+    font-size: 21px;
+    line-height: 29px;
+    letter-spacing: 0.1em;
+  }
+  &--middle {
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    line-height: 25px;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 30px;
+  max-width: 1140px;
+  margin: 0 auto;
+  background: $color-black;
+  border: 1px solid black;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include laptop() {
+    max-width: 960px;
+  }
+  @include tablet() {
+    max-width: 720px;
+  }
+  @include mobile() {
+    max-width: 540px;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
