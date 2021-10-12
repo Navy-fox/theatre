@@ -1,9 +1,16 @@
 @import "variables";
 @import "media";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Open+Sans+Condensed:wght@300;700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .text {
@@ -13,7 +20,8 @@
   font-style: normal;
   line-height: 22px;
   letter-spacing: 0.05em;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+
   &--gold {
     color: $color-gold;
   }
@@ -26,15 +34,17 @@
     font-size: 14px;
     font-weight: normal;
     line-height: 150%;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     //default letter-spacing?
     letter-spacing: 1em;
   }
+
   &--big {
     font-size: 21px;
     line-height: 29px;
     letter-spacing: 0.1em;
   }
+
   &--middle {
     font-size: 18px;
     letter-spacing: 0.1em;
@@ -43,13 +53,8 @@
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 30px;
   max-width: 1140px;
   margin: 0 auto;
-  background: $color-black;
-  border: 1px solid black;
   padding-left: 15px;
   padding-right: 15px;
   @include laptop() {
@@ -60,6 +65,20 @@
   }
   @include mobile() {
     max-width: 540px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 30px;
+  @include mobile() {
     grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@for $key from 1 through 12 {
+  .column-#{$key} {
+    grid-column: span $key;
   }
 }
