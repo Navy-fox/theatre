@@ -12,6 +12,14 @@ a {
   text-decoration: none;
   color: inherit;
 }
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
 
 .text {
   font-size: 16px;
@@ -36,7 +44,7 @@ a {
     line-height: 150%;
     font-family: 'Open Sans', sans-serif;
     //default letter-spacing?
-    letter-spacing: 1em;
+    letter-spacing: normal;
   }
 
   &--big {
@@ -50,6 +58,34 @@ a {
     letter-spacing: 0.1em;
     line-height: 25px;
   }
+}
+
+.heading {
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $color-white;
+ &--h1 {
+   font-size: 64px;
+   line-height: 87px;
+ }
+  &--h2 {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 65px;
+  }
+  &--h3 {
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    line-height: 33px;
+  }
+}
+
+.but {
+  width: 160px;
+  height: 50px;
+  background: $color-gold;
 }
 
 .wrapper {

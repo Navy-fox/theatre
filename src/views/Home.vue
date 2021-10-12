@@ -3,6 +3,7 @@
     <section class="section section--main">
       <div class="wrapper">
         <Header />
+        <Main />
       </div>
     </section>
   </div>
@@ -10,9 +11,10 @@
 
 <script>
 import Header from "../components/header";
+import Main from "../components/main";
 export default {
   name: "Home",
-  components: { Header },
+  components: { Main, Header },
 };
 </script>
 
@@ -22,5 +24,12 @@ export default {
 .home {
   background: $color-black;
   min-height: 100vh;
+}
+
+.section {
+  &--main {
+    background-image: url("/img/main.png");
+    min-height: 100vh;
+  }
 }
 </style>

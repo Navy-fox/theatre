@@ -37,7 +37,7 @@ export default {
 
     a {
       border-bottom: 2px $color-gold solid;
-      padding-bottom: 5px;
+      padding-bottom: 4px;
     }
   }
 }
