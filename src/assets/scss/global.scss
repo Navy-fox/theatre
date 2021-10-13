@@ -29,6 +29,9 @@ button {
   line-height: 22px;
   letter-spacing: 0.05em;
   font-family: 'Open Sans Condensed', sans-serif;
+  span {
+    color: $color-gold;
+  }
 
   &--gold {
     color: $color-gold;
@@ -74,6 +77,9 @@ button {
     font-size: 48px;
     font-weight: 300;
     line-height: 65px;
+    span {
+      color: $color-gold;
+    }
   }
   &--h3 {
     font-size: 24px;
@@ -111,6 +117,10 @@ button {
   @include mobile() {
     grid-template-columns: repeat(6, 1fr);
   }
+}
+
+.pt {
+  padding-top: 150px;
 }
 
 .social-icon {

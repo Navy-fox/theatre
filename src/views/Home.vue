@@ -7,7 +7,11 @@
         <Main />
       </div>
     </section>
-    <section class="section section--about"></section>
+    <section class="section section--about">
+      <div class="wrapper">
+        <About />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -15,10 +19,11 @@
 import Header from "../components/header";
 import Main from "../components/main";
 import Sidebar from "../components/sidebar";
+import About from "../components/about";
 
 export default {
   name: "Home",
-  components: { Sidebar, Main, Header },
+  components: { About, Sidebar, Main, Header },
 };
 </script>
 
@@ -39,7 +44,7 @@ export default {
     min-height: 100vh;
   }
   &--about {
-    height: 100px;
+    //height: 100px;
   }
 }
 </style>
