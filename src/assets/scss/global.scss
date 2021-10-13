@@ -113,6 +113,15 @@ button {
   }
 }
 
+.social-icon {
+  fill-opacity: 0.6;
+  &:hover {
+    fill: $color-gold;
+    fill-opacity: 1;
+    cursor: pointer;
+  }
+}
+
 @for $key from 1 through 12 {
   .column-#{$key} {
     grid-column: span $key;
