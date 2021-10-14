@@ -12,14 +12,23 @@
         <About />
       </div>
     </section>
-    <section class="section section--about">
+    <section class="section">
       <div>
         <Projects />
       </div>
     </section>
-    <section class="section section--about">
+    <section class="section">
       <div class="wrapper pt">
         <Rating />
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrapper pt">
+        <Partners />
+      </div>
+      <div class="wrapper pt120">
+        <Contacts />
+        <Footer />
       </div>
     </section>
   </div>
@@ -32,10 +41,23 @@ import Sidebar from "../components/sidebar";
 import About from "../components/about";
 import Projects from "../components/projects";
 import Rating from "../components/rating";
+import Partners from "../components/partners";
+import Contacts from "../components/contacts";
+import Footer from "../components/footer";
 
 export default {
   name: "Home",
-  components: { Rating, Projects, About, Sidebar, Main, Header },
+  components: {
+    Footer,
+    Contacts,
+    Partners,
+    Rating,
+    Projects,
+    About,
+    Sidebar,
+    Main,
+    Header,
+  },
 };
 </script>
 

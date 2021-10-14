@@ -1,8 +1,6 @@
 @import "variables";
 @import "media";
-//@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Open+Sans+Condensed:wght@300;700&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 * {
   padding: 0;
@@ -14,6 +12,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 button {
   padding: 0;
   border: none;
@@ -21,6 +20,27 @@ button {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+
+  &:target {
+    border: none;
+  }
+}
+
+input, textarea {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  color: #989898;
+  background-color: #444444;
+  border: #616161 1px solid;
+  padding-left: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 .text {
@@ -31,6 +51,7 @@ button {
   line-height: 22px;
   letter-spacing: 0.05em;
   font-family: 'Open Sans Condensed', sans-serif;
+
   span {
     color: $color-gold;
   }
@@ -65,7 +86,7 @@ button {
   }
 
   &--rating {
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 150%;
     font-size: 36px;
     letter-spacing: normal;
@@ -78,23 +99,36 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   color: $color-white;
- &--h1 {
-   font-size: 64px;
-   line-height: 87px;
- }
+
+  &--h1 {
+    font-size: 64px;
+    line-height: 87px;
+  }
+
   &--h2 {
     font-size: 48px;
     font-weight: 300;
     line-height: 65px;
+
     span {
       color: $color-gold;
     }
   }
+
   &--h3 {
     font-size: 24px;
     letter-spacing: 0.05em;
     line-height: 33px;
   }
+}
+
+.caption {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  font-style: normal;
+  color: #989898;
+  line-height: 150%;
 }
 
 .but {
@@ -131,12 +165,18 @@ button {
 .pt {
   padding-top: 150px;
 }
+
 .pt145 {
   padding-top: 145px;
 }
 
+.pt120 {
+  padding-top: 120px;
+}
+
 .social-icon {
   fill-opacity: 0.6;
+
   &:hover {
     fill: $color-gold;
     fill-opacity: 1;
