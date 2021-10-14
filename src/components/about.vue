@@ -1,6 +1,6 @@
 <template>
-  <div class="about grid">
-    <h1 class="about__title heading heading--h2 column-12 pt">
+  <div class="about grid pt">
+    <h1 class="about__title heading heading--h2 column-12">
       <span>о</span> театре
     </h1>
     <div class="about__text column-5">

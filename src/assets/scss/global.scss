@@ -1,6 +1,8 @@
 @import "variables";
 @import "media";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Open+Sans+Condensed:wght@300;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Open+Sans+Condensed:wght@300;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;700&display=swap');
 
 * {
   padding: 0;
@@ -60,6 +62,13 @@ button {
     font-size: 18px;
     letter-spacing: 0.1em;
     line-height: 25px;
+  }
+
+  &--rating {
+    font-family: 'Open Sans',sans-serif;
+    line-height: 150%;
+    font-size: 36px;
+    letter-spacing: normal;
   }
 }
 
@@ -121,6 +130,9 @@ button {
 
 .pt {
   padding-top: 150px;
+}
+.pt145 {
+  padding-top: 145px;
 }
 
 .social-icon {

@@ -12,6 +12,16 @@
         <About />
       </div>
     </section>
+    <section class="section section--about">
+      <div>
+        <Projects />
+      </div>
+    </section>
+    <section class="section section--about">
+      <div class="wrapper pt">
+        <Rating />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -20,10 +30,12 @@ import Header from "../components/header";
 import Main from "../components/main";
 import Sidebar from "../components/sidebar";
 import About from "../components/about";
+import Projects from "../components/projects";
+import Rating from "../components/rating";
 
 export default {
   name: "Home",
-  components: { About, Sidebar, Main, Header },
+  components: { Rating, Projects, About, Sidebar, Main, Header },
 };
 </script>
 
@@ -43,6 +55,7 @@ export default {
     //background-size: auto 100%;
     min-height: 100vh;
   }
+
   &--about {
     //height: 100px;
   }
