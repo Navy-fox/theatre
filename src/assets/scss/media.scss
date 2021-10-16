@@ -1,4 +1,9 @@
 @import "variables";
+@mixin desktop() {
+  @media (max-width: $media-desktop) {
+    @content;
+  }
+}
 @mixin laptop() {
   @media (max-width: $media-laptop) {
     @content;

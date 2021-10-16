@@ -1,5 +1,5 @@
 <template>
-  <div class="about grid pt">
+  <div class="about grid pt-main">
     <h1 class="about__title heading heading--h2 column-12">
       <span>о</span> театре
     </h1>
@@ -31,7 +31,11 @@
         </div>
       </div>
     </div>
-    <img class="about__image column-4" src="img/about.png" alt="" />
+    <img
+      class="about__image column-4 desktop-only"
+      src="img/about.png"
+      alt=""
+    />
   </div>
 </template>
 
@@ -42,8 +46,13 @@ export default {
 </script>
 
 <style lang="scss">
+@import "src/assets/scss/system";
+
 .about {
   grid-row-gap: 100px;
+  @include laptop() {
+    grid-row-gap: 60px;
+  }
 
   &__title {
     justify-self: center;
@@ -52,18 +61,59 @@ export default {
   &__text {
     display: grid;
     grid-row-gap: 9px;
+    @include desktop() {
+      grid-column: 3/8;
+    }
+    @include laptop() {
+      grid-column: span 8;
+    }
+    @include tablet() {
+      grid-column: span 12;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      row-gap: 40px;
+    }
+    @include mobile() {
+      grid-column: 1/12;
+    }
   }
 }
+
 .numbers {
   display: grid;
   grid-row-gap: 34px;
+  @include desktop() {
+    grid-column: 9/12;
+  }
+  @include laptop() {
+    grid-column: span 4;
+  }
+  @include tablet() {
+    grid-column: span 12;
+    grid-row-gap: 40px;
+  }
+
   &__title {
+    @include tablet() {
+      justify-self: center;
+      //justify-content: center;
+      //align-items: center;
+    }
   }
 
   &__items {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include tablet() {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      column-gap: 30px;
+    }
   }
 
   &__item {

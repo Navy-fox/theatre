@@ -8,6 +8,9 @@
       <router-link to="/">контакты</router-link>
     </nav>
     <div class="column-3 header__tel">
+      <button class="mobile-only">
+        <img src="icon/menu.svg" alt="" />
+      </button>
       <a href="tel:+74951234567" class="text">+7 495 123-45-67</a>
     </div>
   </header>
@@ -28,6 +31,12 @@ export default {
   &__nav {
     display: flex;
     justify-content: space-between;
+    @include desktop() {
+      grid-column: 3/12;
+    }
+    @include laptop() {
+      display: none;
+    }
   }
 
   &__tel {
@@ -38,6 +47,21 @@ export default {
     a {
       border-bottom: 2px $color-gold solid;
       padding-bottom: 4px;
+    }
+
+    @include desktop() {
+      grid-column: 3/12;
+      padding-top: 50px;
+      justify-content: center;
+    }
+    @include laptop() {
+      padding: 0;
+      justify-content: space-between;
+      align-items: center;
+      grid-column: span 12;
+    }
+    @include tablet() {
+      grid-column: span 6;
     }
   }
 }

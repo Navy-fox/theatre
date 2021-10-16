@@ -17,13 +17,13 @@
         <Projects />
       </div>
     </section>
-    <section class="section">
-      <div class="wrapper pt">
+    <section class="section section--rating">
+      <div class="wrapper pt-main">
         <Rating />
       </div>
     </section>
     <section class="section">
-      <div class="wrapper pt">
+      <div class="wrapper pt-main">
         <Partners />
       </div>
       <div class="wrapper pt120">
@@ -72,14 +72,24 @@ export default {
 .section {
   &--main {
     background-image: url("/img/main.png");
-    //background-position: 0 0;
-    //background-repeat: no-repeat;
-    //background-size: auto 100%;
     min-height: 100vh;
+    @include laptop() {
+      min-height: 800px;
+    }
+    @include tablet() {
+      min-height: 600px;
+    }
   }
 
-  &--about {
-    //height: 100px;
+  &--rating {
+    @include laptop() {
+      background-image: url("/img/rating2.png");
+      //background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      min-width: 100vw;
+      min-height: 550px;
+    }
   }
 }
 </style>

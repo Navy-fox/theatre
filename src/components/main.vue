@@ -10,7 +10,7 @@
       </p>
       <button class="but text text--middle text--uppercase">афиша</button>
     </div>
-    <div class="slider">123</div>
+    <div class="slider desktop-only">123</div>
   </div>
 </template>
 
@@ -25,13 +25,38 @@ export default {
 
 .main {
   margin-top: 190px;
+  @include desktop() {
+    margin-top: 231px;
+  }
+  @include laptop() {
+    margin-top: 165px;
+  }
+  @include tablet() {
+    margin-top: 107px;
+  }
+  @include mobile() {
+    margin-top: 56px;
+  }
 }
+
 .preview {
   align-self: center;
+  @include desktop() {
+    grid-column: 3/11;
+  }
+  @include laptop() {
+    //padding-left: 15px;
+    grid-column: 1/12;
+  }
+  @include tablet() {
+    grid-column: 1/12;
+  }
 }
+
 .but {
   margin-bottom: 40px;
 }
+
 p {
   margin-top: 31px;
   margin-bottom: 44px;

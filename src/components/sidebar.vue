@@ -38,7 +38,9 @@ export default {
   background: $color-black;
   opacity: 0.75;
   position: fixed;
-
+  @include laptop() {
+    display: none;
+  }
   .title {
     writing-mode: sideways-lr;
   }

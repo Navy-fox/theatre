@@ -45,6 +45,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "src/assets/scss/system";
+
 .rating {
   background-image: url("/img/rating.png");
   background-position: 0 0;
@@ -53,6 +55,9 @@ export default {
   min-height: 550px;
   justify-items: center;
   align-content: center;
+  @include laptop() {
+    background-image: none;
+  }
 }
 
 .dates {

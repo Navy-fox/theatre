@@ -1,5 +1,5 @@
 <template>
-  <div class="projects pt145">
+  <div class="projects pt-projects">
     <h1 class="projects__title heading heading--h2 column-12">
       <span>наши</span> постановки
     </h1>
