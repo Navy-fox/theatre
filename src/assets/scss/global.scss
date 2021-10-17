@@ -175,6 +175,39 @@ input, textarea {
   }
 }
 
+@for $key from 1 through 12 {
+  .column-#{$key} {
+    grid-column: span $key;
+    @include tablet() {
+      grid-column: span ceil($key / 2);
+    }
+  }
+  @include desktop() {
+    .column-lap-#{$key} {
+      grid-column: span $key;
+      @include tablet() {
+        grid-column: span ceil($key / 2);
+      }
+    }
+  }
+  @include tablet() {
+    .column-tab-#{$key} {
+      grid-column: span $key;
+      @include tablet() {
+        grid-column: span ceil($key / 2);
+      }
+    }
+  }
+  @include mobile() {
+    .column-mob-#{$key} {
+      grid-column: span $key;
+      @include tablet() {
+        grid-column: span ceil($key / 2);
+      }
+    }
+  }
+}
+
 .pt-main {
   padding-top: 150px;
   @include laptop() {
@@ -222,8 +255,3 @@ input, textarea {
   }
 }
 
-@for $key from 1 through 12 {
-  .column-#{$key} {
-    grid-column: span $key;
-  }
-}

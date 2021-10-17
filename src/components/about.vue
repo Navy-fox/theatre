@@ -3,7 +3,8 @@
     <h1 class="about__title heading heading--h2 column-12">
       <span>о</span> театре
     </h1>
-    <div class="about__text column-5">
+    <div class="column-2 custom-view"></div>
+    <div class="about__text column-5 column-tab-12">
       <h2 class="text text--big text--uppercase">Самый лучший театр СПБ</h2>
       <p class="text text--little">
         Как свидетельствуют архивные документы, первое каменное здание Большого
@@ -16,7 +17,7 @@
         других свидетельствах, годом открытия можно считать 1784 год.
       </p>
     </div>
-    <div class="about__numbers numbers column-3">
+    <div class="about__numbers numbers column-3 column-lap-4 column-tab-12">
       <h2 class="text text--big text--uppercase numbers__title">
         немного о цифрах
       </h2>
@@ -47,7 +48,15 @@ export default {
 
 <style lang="scss">
 @import "src/assets/scss/system";
-
+.custom-view {
+  display: none;
+  @include desktop() {
+    display: block;
+  }
+  @include laptop() {
+    display: none;
+  }
+}
 .about {
   grid-row-gap: 100px;
   @include laptop() {
@@ -61,14 +70,11 @@ export default {
   &__text {
     display: grid;
     grid-row-gap: 9px;
-    @include desktop() {
-      grid-column: 3/8;
-    }
-    @include laptop() {
-      grid-column: span 8;
-    }
+    //@include laptop() {
+    //  grid-column: span 8;
+    //}
     @include tablet() {
-      grid-column: span 12;
+      //grid-column: span 12;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -76,23 +82,14 @@ export default {
       text-align: center;
       row-gap: 40px;
     }
-    @include mobile() {
-      grid-column: 1/12;
-    }
   }
 }
 
 .numbers {
   display: grid;
   grid-row-gap: 34px;
-  @include desktop() {
-    grid-column: 9/12;
-  }
-  @include laptop() {
-    grid-column: span 4;
-  }
+
   @include tablet() {
-    grid-column: span 12;
     grid-row-gap: 40px;
   }
 

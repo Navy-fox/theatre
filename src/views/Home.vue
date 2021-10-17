@@ -27,7 +27,7 @@
         <Partners />
       </div>
       <div class="wrapper pt120">
-        <Contacts />
+        <!--        <Contacts />-->
         <Footer />
       </div>
     </section>
@@ -42,14 +42,12 @@ import About from "../components/about";
 import Projects from "../components/projects";
 import Rating from "../components/rating";
 import Partners from "../components/partners";
-import Contacts from "../components/contacts";
 import Footer from "../components/footer";
 
 export default {
   name: "Home",
   components: {
     Footer,
-    Contacts,
     Partners,
     Rating,
     Projects,
