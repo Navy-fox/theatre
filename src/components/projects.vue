@@ -29,7 +29,8 @@ export default {
   mounted() {
     new Splide(".carousel", {
       arrows: false,
-      perPage: 4,
+      autoWidth: true,
+      height: "550px",
       type: "slide",
     }).mount();
   },
@@ -37,11 +38,6 @@ export default {
 </script>
 
 <style lang="scss">
-.card {
-  &:hover {
-    color: red;
-  }
-}
 .projects {
   display: flex;
   flex-direction: column;
@@ -53,10 +49,6 @@ export default {
 }
 
 .carousel {
-  height: 550px;
-  width: calc(100vw - 150px);
   margin-left: 150px;
-  background-color: #d1a954;
-  opacity: 0.2;
 }
 </style>
