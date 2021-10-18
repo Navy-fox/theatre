@@ -17,25 +17,35 @@
       grid-column-end: span ceil($key / 2);
     }
   }
+}
+@for $key from 1 through 12 {
   @include desktop() {
     .column-lap-#{$key} {
-      grid-column: span $key;
+      grid-column-end: span $key;
       @include tablet() {
-        grid-column: span ceil($key / 2);
+        grid-column-end: span ceil($key / 2);
       }
     }
   }
+
+}
+@for $key from 1 through 12 {
+
   @include tablet() {
     .column-tab-#{$key} {
-      grid-column: span ceil($key / 2);
-    }
-  }
-  @include mobile() {
-    .column-mob-#{$key} {
-      grid-column: span ceil($key / 2);
+      grid-column-end: span ceil($key / 2);
     }
   }
 }
+@for $key from 1 through 12 {
+  @include mobile() {
+    .column-mob-#{$key} {
+      grid-column-end: span ceil($key / 2);
+    }
+  }
+}
+
+// От какой колонки старт
 @for $key from 1 through 12 {
   .column-start-#{$key} {
     grid-column-start: $key;
@@ -43,6 +53,9 @@
       grid-column-start: ceil($key / 2);
     }
   }
+
+}
+@for $key from 1 through 12 {
   @include desktop() {
     .column-start-lap-#{$key} {
       grid-column-start: $key;
@@ -51,11 +64,21 @@
       }
     }
   }
+
+}
+@for $key from 1 through 12 {
   @include tablet() {
     .column-start-tab-#{$key} {
-      grid-column-start: ceil($key / 2);
+      @if($key == 1) {
+        grid-column-start: auto;
+      } @else {
+        grid-column-start: ceil($key / 2);
+      }
     }
   }
+
+}
+@for $key from 1 through 12 {
   @include mobile() {
     .column-start-mob-#{$key} {
       grid-column-start: ceil($key / 2);
