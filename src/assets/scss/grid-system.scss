@@ -1,0 +1,64 @@
+@import "variables";
+@import "media";
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 30px;
+  @include tablet() {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@for $key from 1 through 12 {
+  .column-#{$key} {
+    grid-column-end: span $key;
+    @include tablet() {
+      grid-column-end: span ceil($key / 2);
+    }
+  }
+  @include desktop() {
+    .column-lap-#{$key} {
+      grid-column: span $key;
+      @include tablet() {
+        grid-column: span ceil($key / 2);
+      }
+    }
+  }
+  @include tablet() {
+    .column-tab-#{$key} {
+      grid-column: span ceil($key / 2);
+    }
+  }
+  @include mobile() {
+    .column-mob-#{$key} {
+      grid-column: span ceil($key / 2);
+    }
+  }
+}
+@for $key from 1 through 12 {
+  .column-start-#{$key} {
+    grid-column-start: $key;
+    @include tablet() {
+      grid-column-start: ceil($key / 2);
+    }
+  }
+  @include desktop() {
+    .column-start-lap-#{$key} {
+      grid-column-start: $key;
+      @include tablet() {
+        grid-column-start: $key;
+      }
+    }
+  }
+  @include tablet() {
+    .column-start-tab-#{$key} {
+      grid-column-start: ceil($key / 2);
+    }
+  }
+  @include mobile() {
+    .column-start-mob-#{$key} {
+      grid-column-start: ceil($key / 2);
+    }
+  }
+}
