@@ -1,11 +1,9 @@
 <template>
   <div class="home">
     <Sidebar />
+    <Header />
     <section class="section section--main">
-      <div class="wrapper">
-        <Header />
-        <Main />
-      </div>
+      <Main />
     </section>
     <section class="section section--about">
       <div class="wrapper">
@@ -13,9 +11,7 @@
       </div>
     </section>
     <section class="section">
-      <div>
-        <Projects />
-      </div>
+      <Projects />
     </section>
     <section class="section section--rating">
       <div class="wrapper pt-main">
@@ -71,10 +67,13 @@ export default {
   &--main {
     background-image: url("/img/main.png");
     min-height: 100vh;
-    @include laptop() {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include tablet() {
       min-height: 800px;
     }
-    @include tablet() {
+    @include mobile() {
       min-height: 600px;
     }
   }

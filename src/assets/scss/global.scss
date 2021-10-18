@@ -51,7 +51,7 @@ input, textarea {
   line-height: 22px;
   letter-spacing: 0.05em;
   font-family: 'Open Sans Condensed', sans-serif;
-  @include mobile() {
+  @include mobile-sm() {
     font-size: 14px;
   }
 
@@ -109,7 +109,8 @@ input, textarea {
   &--h1 {
     font-size: 64px;
     line-height: 87px;
-    @include mobile() {
+    white-space: nowrap;
+    @include mobile-sm() {
       font-size: 48px;
       line-height: 65px;
     }
@@ -145,7 +146,7 @@ input, textarea {
   width: 160px;
   height: 50px;
   background: $color-gold;
-  @include mobile(){
+  @include mobile-sm(){
     width: 100%;
   }
 }

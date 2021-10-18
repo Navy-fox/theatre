@@ -1,5 +1,5 @@
 <template>
-  <div class="grid main">
+  <div class="grid main wrapper">
     <div class="preview column-6">
       <h1 class="heading heading--h1">Большой театр</h1>
       <p class="text text--little">
@@ -24,18 +24,19 @@ export default {
 @import "src/assets/scss/system";
 
 .main {
-  margin-top: 190px;
+  padding-top: 248px;
   @include desktop() {
-    margin-top: 231px;
+    padding-top: 384px;
+    margin: 0 0;
   }
   @include laptop() {
-    margin-top: 165px;
+    padding-top: 231px;
   }
   @include tablet() {
-    margin-top: 107px;
+    padding-top: 158px;
   }
   @include mobile() {
-    margin-top: 56px;
+    padding-top: 103px;
   }
 }
 
@@ -46,15 +47,16 @@ export default {
   }
   @include laptop() {
     //padding-left: 15px;
-    grid-column: 1/12;
+    grid-column: 2/11;
   }
   @include tablet() {
-    grid-column: 1/12;
+    //margin: 0 0 !important;
+    grid-column: 2/11;
   }
 }
 
 .but {
-  margin-bottom: 40px;
+  //margin-bottom: 40px;
 }
 
 p {

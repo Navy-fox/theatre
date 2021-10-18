@@ -1,9 +1,9 @@
 <template>
-  <div class="projects pt-projects">
+  <div class="projects pt-projects grid">
     <h2 class="projects__title heading heading--h2 column-12">
       <span>наши</span> постановки
     </h2>
-    <div class="carousel">
+    <div class="carousel column-12">
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide" v-for="(i, k) in PROJECT_CARDS" :key="k">
@@ -27,28 +27,49 @@ export default {
     PROJECT_CARDS,
   }),
   mounted() {
-    new Splide(".carousel", {
+    const slide = new Splide(".carousel", {
       arrows: false,
       autoWidth: true,
+      perMove: 1,
       height: "550px",
       type: "slide",
-    }).mount();
+      // breakpoints: {
+      //   992: {
+      //     height: "1000px",
+      //   },
+      // },
+    });
+
+    slide.mount();
   },
 };
 </script>
 
 <style lang="scss">
+@import "src/assets/scss/system";
+
 .projects {
-  display: flex;
-  flex-direction: column;
-  row-gap: 100px;
+  //display: flex;
+  //flex-direction: column;
+  //row-gap: 100px;
+  grid-row-gap: 100px;
 
   &__title {
+    justify-self: center;
     align-self: center;
   }
 }
 
 .carousel {
-  margin-left: 150px;
+  //margin-left: 150px;
+  //width: calc(100vw - 150px);
+  overflow: hidden;
+  max-width: 100%;
+  grid-column: 2/13;
+  @include desktop() {
+    width: 100%;
+    margin-left: 20px;
+    grid-column: 3/12;
+  }
 }
 </style>
