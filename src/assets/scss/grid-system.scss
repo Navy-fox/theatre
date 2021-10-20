@@ -1,6 +1,5 @@
 @import "variables";
 @import "media";
-
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -19,69 +18,69 @@
   }
 }
 @for $key from 1 through 12 {
-  @include desktop() {
-    .column-lap-#{$key} {
-      grid-column-end: span $key;
-      @include tablet() {
-        grid-column-end: span ceil($key / 2);
-      }
+  @include min-mobile() {
+    .column-mob-#{$key} {
+      grid-column-end: span ceil($key / 2);
     }
   }
-
 }
 @for $key from 1 through 12 {
-
-  @include tablet() {
+  @include min-tablet() {
     .column-tab-#{$key} {
       grid-column-end: span ceil($key / 2);
     }
   }
 }
 @for $key from 1 through 12 {
-  @include mobile() {
-    .column-mob-#{$key} {
-      grid-column-end: span ceil($key / 2);
+  @include min-laptop() {
+    .column-lap-#{$key} {
+      grid-column-end: span $key;
     }
   }
 }
 
-// От какой колонки старт
 @for $key from 1 through 12 {
   .column-start-#{$key} {
-    grid-column-start: $key;
-    @include tablet() {
-      grid-column-start: ceil($key / 2);
-    }
-  }
-
-}
-@for $key from 1 through 12 {
-  @include desktop() {
-    .column-start-lap-#{$key} {
+    @if ($key == 1) {
+      grid-column-start: auto;
+    } @else {
       grid-column-start: $key;
       @include tablet() {
-        grid-column-start: $key;
+        grid-column-start: ceil($key / 2);
       }
     }
   }
-
 }
 @for $key from 1 through 12 {
-  @include tablet() {
-    .column-start-tab-#{$key} {
-      @if($key == 1) {
+  @include min-mobile() {
+    .column-start-mob-#{$key} {
+      @if ($key == 1) {
         grid-column-start: auto;
       } @else {
         grid-column-start: ceil($key / 2);
       }
     }
   }
-
 }
 @for $key from 1 through 12 {
-  @include mobile() {
-    .column-start-mob-#{$key} {
-      grid-column-start: ceil($key / 2);
+  @include min-tablet() {
+    .column-start-tab-#{$key} {
+      @if ($key == 1) {
+        grid-column-start: auto;
+      } @else {
+        grid-column-start: ceil($key );
+      }
+    }
+  }
+}
+@for $key from 1 through 12 {
+  @include min-laptop() {
+    .column-start-lap-#{$key} {
+      @if ($key == 1) {
+        grid-column-start: auto;
+      } @else {
+        grid-column-start: $key;
+      }
     }
   }
 }
