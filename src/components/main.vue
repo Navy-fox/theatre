@@ -1,5 +1,5 @@
 <template>
-  <div class="grid main wrapper">
+  <section class="grid main wrapper">
     <div class="preview column-6">
       <h1 class="heading heading--h1">Большой театр</h1>
       <p class="text text--little">
@@ -11,7 +11,7 @@
       <button class="but text text--middle text--uppercase">афиша</button>
     </div>
     <div class="slider desktop-only">123</div>
-  </div>
+  </section>
 </template>
 
 <script>

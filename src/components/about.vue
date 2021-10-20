@@ -3,8 +3,8 @@
     <h1 class="about__title heading heading--h2 column-12">
       <span>о</span> театре
     </h1>
-    <div class="column-2 custom-view"></div>
-    <div class="about__text column-5 column-tab-12">
+
+    <div class="about__text column-5 column-start-lap-3 column-start-1">
       <h2 class="text text--big text--uppercase">Самый лучший театр СПБ</h2>
       <p class="text text--little">
         Как свидетельствуют архивные документы, первое каменное здание Большого
@@ -17,7 +17,7 @@
         других свидетельствах, годом открытия можно считать 1784 год.
       </p>
     </div>
-    <div class="about__numbers numbers column-3 column-lap-4 column-tab-12">
+    <div class="about__numbers numbers column-3">
       <h2 class="text text--big text--uppercase numbers__title">
         немного о цифрах
       </h2>

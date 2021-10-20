@@ -1,33 +1,13 @@
+
 @import "variables";
 @import "media";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import "reset";
+@import "grid-system";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-
-  &:target {
-    border: none;
-  }
-}
-
-input, textarea {
-  font-family: 'Open Sans', sans-serif;
+input,
+textarea {
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-weight: 600;
   font-style: normal;
@@ -50,7 +30,7 @@ input, textarea {
   font-style: normal;
   line-height: 22px;
   letter-spacing: 0.05em;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   @include mobile-sm() {
     font-size: 14px;
   }
@@ -71,7 +51,7 @@ input, textarea {
     font-size: 14px;
     font-weight: normal;
     line-height: 150%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     //default letter-spacing?
     letter-spacing: normal;
     //@include mobile() {
@@ -92,7 +72,7 @@ input, textarea {
   }
 
   &--rating {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     line-height: 150%;
     font-size: 36px;
     letter-spacing: normal;
@@ -100,7 +80,7 @@ input, textarea {
 }
 
 .heading {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: bold;
@@ -134,7 +114,7 @@ input, textarea {
 }
 
 .caption {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-weight: 600;
   font-style: normal;
@@ -146,7 +126,7 @@ input, textarea {
   width: 160px;
   height: 50px;
   background: $color-gold;
-  @include mobile-sm(){
+  @include mobile-sm() {
     width: 100%;
   }
 }
@@ -167,47 +147,7 @@ input, textarea {
   }
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 30px;
-  @include tablet() {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
 
-@for $key from 1 through 12 {
-  .column-#{$key} {
-    grid-column: span $key;
-    @include tablet() {
-      grid-column: span ceil($key / 2);
-    }
-  }
-  @include desktop() {
-    .column-lap-#{$key} {
-      grid-column: span $key;
-      @include tablet() {
-        grid-column: span ceil($key / 2);
-      }
-    }
-  }
-  @include tablet() {
-    .column-tab-#{$key} {
-      grid-column: span $key;
-      @include tablet() {
-        grid-column: span ceil($key / 2);
-      }
-    }
-  }
-  @include mobile() {
-    .column-mob-#{$key} {
-      grid-column: span $key;
-      @include tablet() {
-        grid-column: span ceil($key / 2);
-      }
-    }
-  }
-}
 
 .pt-main {
   padding-top: 150px;
@@ -255,4 +195,3 @@ input, textarea {
     display: block;
   }
 }
-
