@@ -40,6 +40,15 @@
 }
 
 @for $key from 1 through 12 {
+  @include min-desktop() {
+    .column-#{$key} {
+      grid-column-end: span $key;
+    }
+  }
+}
+
+
+@for $key from 1 through 12 {
   .column-start-#{$key} {
     @if ($key == 1) {
       grid-column-start: auto;
@@ -76,6 +85,17 @@
 @for $key from 1 through 12 {
   @include min-laptop() {
     .column-start-lap-#{$key} {
+      @if ($key == 1) {
+        grid-column-start: auto;
+      } @else {
+        grid-column-start: $key;
+      }
+    }
+  }
+}
+@for $key from 1 through 12 {
+  @include min-desktop() {
+    .column-start-#{$key} {
       @if ($key == 1) {
         grid-column-start: auto;
       } @else {

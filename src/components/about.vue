@@ -4,7 +4,7 @@
       <span>о</span> театре
     </h1>
 
-    <div class="about__text column-5">
+    <div class="about__text column-5 column-start-lap-3 column-start-1">
       <h2 class="text text--big text--uppercase">Самый лучший театр СПБ</h2>
       <p class="text text--little">
         Как свидетельствуют архивные документы, первое каменное здание Большого
