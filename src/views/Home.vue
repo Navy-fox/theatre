@@ -10,7 +10,7 @@
         <About />
       </div>
     </section>
-    <section class="section">
+    <section class="section section--projects">
       <Projects />
     </section>
     <section class="section section--rating">
@@ -18,15 +18,19 @@
         <Rating />
       </div>
     </section>
-    <section class="section">
+    <section class="section section--partners">
       <div class="wrapper pt-main">
         <Partners />
       </div>
+    </section>
+    <section class="section section--contacts">
       <div class="wrapper pt120">
-        <!--        <Contacts />-->
-        <Footer />
+        <Contacts />
       </div>
     </section>
+    <div class="wrapper">
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -39,10 +43,12 @@ import Projects from "../components/projects";
 import Rating from "../components/rating";
 import Partners from "../components/partners";
 import Footer from "../components/footer";
+import Contacts from "../components/contacts";
 
 export default {
   name: "Home",
   components: {
+    Contacts,
     Footer,
     Partners,
     Rating,

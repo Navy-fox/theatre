@@ -33,6 +33,7 @@ export default {
       perMove: 1,
       height: "550px",
       type: "slide",
+      pagination: false,
       // breakpoints: {
       //   992: {
       //     height: "1000px",
