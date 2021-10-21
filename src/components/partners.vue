@@ -3,13 +3,13 @@
     <h1 class="partners__title heading heading--h2 column-12">
       <span>партнеры</span> театра
     </h1>
-    <div class="partners__logos column-12">
-      <img
-        src="icon/logo.svg"
-        alt=""
-        v-for="item in new Array(8)"
-        :key="item"
-      />
+    <div class="block column-12">
+      <div class="logos">
+        <div class="logo" v-for="item in new Array(8)" :key="item">
+          <img src="icon/logo.svg" alt="" />
+          <img src="icon/logo.svg" alt="" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -27,15 +27,27 @@ export default {
   //justify-content: center;
   //align-items: center;
   row-gap: 100px;
+
   &__title {
     justify-self: center;
   }
-  &__logos {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 78px;
-    row-gap: 80px;
-    justify-content: center;
+
+  .block {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    .logos {
+      display: flex;
+      flex: 0 0 auto;
+      column-gap: 78px;
+
+      .logo {
+        display: flex;
+        flex-direction: column;
+        //column-gap: 78px;
+        row-gap: 80px;
+      }
+    }
   }
 }
 </style>
