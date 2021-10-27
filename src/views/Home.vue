@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <MobileMenu />
     <Sidebar />
     <Header />
     <section class="section section--main">
@@ -44,10 +45,12 @@ import Rating from "../components/rating";
 import Partners from "../components/partners";
 import Footer from "../components/footer";
 import Contacts from "../components/contacts";
+import MobileMenu from "../components/mobile-menu";
 
 export default {
   name: "Home",
   components: {
+    MobileMenu,
     Contacts,
     Footer,
     Partners,

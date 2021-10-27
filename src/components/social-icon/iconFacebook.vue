@@ -1,8 +1,8 @@
 <template>
   <svg
     class="social-icon"
-    width="15"
-    height="26"
+    :width="w"
+    :height="h"
     viewBox="0 0 15 26"
     fill="white"
     xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,16 @@
 <script>
 export default {
   name: "iconFacebook",
+  props: {
+    w: {
+      type: String,
+      default: "15px",
+    },
+    h: {
+      type: String,
+      default: "26px",
+    },
+  },
 };
 </script>
 

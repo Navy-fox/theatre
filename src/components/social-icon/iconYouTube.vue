@@ -1,8 +1,8 @@
 <template>
   <svg
     class="social-icon"
-    width="26"
-    height="18"
+    :width="w"
+    :height="h"
     viewBox="0 0 26 18"
     fill="white"
     xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,16 @@
 <script>
 export default {
   name: "iconYouTube",
+  props: {
+    w: {
+      type: String,
+      default: "26px",
+    },
+    h: {
+      type: String,
+      default: "18px",
+    },
+  },
 };
 </script>
 

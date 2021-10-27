@@ -191,7 +191,7 @@ textarea {
 
 .mobile-only {
   display: none;
-  @include laptop() {
+  @include tablet() {
     display: block;
   }
 }
