@@ -4,8 +4,14 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    showMenu: false,
+  },
+  mutations: {
+    setShowMenu(state, val) {
+      state.showMenu = val
+    }
+  },
   actions: {},
   modules: {},
 });

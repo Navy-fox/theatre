@@ -9,7 +9,7 @@
         <router-link to="/">контакты</router-link>
       </nav>
       <div class="column-3 header__tel">
-        <button class="mobile-only">
+        <button class="mobile-only" @click="setShowMenu">
           <img src="icon/menu.svg" alt="" />
         </button>
         <a href="tel:+74951234567" class="text">+7 495 123-45-67</a>
@@ -19,8 +19,14 @@
 </template>
 
 <script>
+
 export default {
   name: "header",
+  methods: {
+    setShowMenu() {
+      this.$store.commit('setShowMenu', true)
+    }
+  }
 };
 </script>
 
