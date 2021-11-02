@@ -1,6 +1,6 @@
 <template>
   <div class="mobile-menu mobile-only" v-show="showMenu">
-    <img class="close" src="icon/close.svg" alt="" @click="setShowMenu"/>
+    <img class="close" src="icon/close.svg" alt="" @click="setShowMenu" />
     <div class="menu">
       <nav class="nav heading heading--h3">
         <router-link to="/">Главная</router-link>
@@ -10,10 +10,10 @@
         <router-link to="/">контакты</router-link>
       </nav>
       <div class="icon-block">
-        <IconFacebook h="45px" w="26px"/>
-        <IconInstagram h="45px" w="45px"/>
-        <IconYouTube h="31px" w="45px"/>
-        <IconVk h="24px" w="45px"/>
+        <IconFacebook h="45px" w="26px" />
+        <IconInstagram h="45px" w="45px" />
+        <IconYouTube h="31px" w="45px" />
+        <IconVk h="24px" w="45px" />
       </div>
     </div>
   </div>
@@ -27,17 +27,17 @@ import IconFacebook from "./social-icon/iconFacebook";
 
 export default {
   name: "mobile-menu",
-  components: {IconVk, IconInstagram, IconYouTube, IconFacebook},
+  components: { IconVk, IconInstagram, IconYouTube, IconFacebook },
   computed: {
     showMenu() {
-      return this.$store.state.showMenu
-    }
+      return this.$store.state.showMenu;
+    },
   },
   methods: {
     setShowMenu() {
-      this.$store.commit('setShowMenu', false)
-    }
-  }
+      this.$store.commit("setShowMenu", false);
+    },
+  },
 };
 </script>
 

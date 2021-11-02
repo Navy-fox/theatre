@@ -10,13 +10,62 @@
       </p>
       <button class="but text text--middle text--uppercase">афиша</button>
     </div>
-    <div class="slider desktop-only">123</div>
+
+    <div class="slider desktop-only">
+      <div class="splide__track desktop-only">
+        <ul class="splide__list">
+          <li
+            class="splide__slide"
+            v-for="(i, k) in MAIN_SLIDER_CARDS"
+            :key="k"
+          >
+            <MainSliderCards :img="i.img" />
+          </li>
+        </ul>
+      </div>
+      <div class="slider__buttons desktop-only">
+        <button
+          class="text text--middle text--uppercase desktop-only"
+          @click="slide.go('<')"
+        >
+          <img src="icon/ArrowL.svg" alt="" />
+          пред
+        </button>
+        <button
+          class="text text--middle text--uppercase desktop-only"
+          @click="slide.go('>')"
+        >
+          след
+          <img src="icon/ArrowR.svg" alt="" />
+        </button>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
+import MainSliderCards from "./little/main-slider-cards";
+import { MAIN_SLIDER_CARDS } from "../data/MAIN_SLIDER_CARDS";
+import Splide from "@splidejs/splide";
+
 export default {
   name: "main",
+  components: { MainSliderCards },
+  data: () => ({
+    MAIN_SLIDER_CARDS,
+    slide: null,
+  }),
+  methods: {},
+  mounted() {
+    const slide = new Splide(".slider", {
+      // arrowPath: "/icon/arrow.svg",
+      type: "slide",
+      arrows: false,
+      pagination: false,
+    });
+    slide.mount();
+    this.slide = slide;
+  },
 };
 </script>
 
@@ -65,6 +114,26 @@ p {
 }
 
 .slider {
-  height: 570px;
+  grid-column: 8/13;
+  //max-width: 682px;
+  display: grid;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
+  //height: 570px;
+
+  &__buttons {
+    //max-width: 370px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+  }
+
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
 }
 </style>
