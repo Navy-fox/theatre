@@ -3,11 +3,11 @@
     <img class="close" src="icon/close.svg" alt="" @click="setShowMenu" />
     <div class="menu">
       <nav class="nav heading heading--h3">
-        <router-link to="/">Главная</router-link>
-        <router-link to="/">о театре</router-link>
-        <router-link to="/">Наши постановки</router-link>
-        <router-link to="/">партнеры театра</router-link>
-        <router-link to="/">контакты</router-link>
+        <router-link to="#main">Главная</router-link>
+        <router-link to="#about">о театре</router-link>
+        <router-link to="#projects">Наши постановки</router-link>
+        <router-link to="#partners">партнеры театра</router-link>
+        <router-link to="#contacts">контакты</router-link>
       </nav>
       <div class="icon-block">
         <IconFacebook h="45px" w="26px" />
@@ -66,6 +66,7 @@ export default {
 }
 
 .close {
+  cursor: pointer;
   position: absolute;
   right: 30px;
   top: 30px;
