@@ -3,15 +3,15 @@
     <MobileMenu />
     <Sidebar />
     <Header />
-    <section class="section section--main">
+    <section class="section section--main" id="main">
       <Main />
     </section>
-    <section class="section section--about">
+    <section class="section section--about" id="about">
       <div class="wrapper">
         <About />
       </div>
     </section>
-    <section class="section section--projects">
+    <section class="section section--projects" id="projects">
       <Projects />
     </section>
     <section class="section section--rating">
@@ -19,12 +19,12 @@
         <Rating />
       </div>
     </section>
-    <section class="section section--partners">
+    <section class="section section--partners" id="partners">
       <div class="wrapper pt-main">
         <Partners />
       </div>
     </section>
-    <section class="section section--contacts">
+    <section class="section section--contacts" id="contacts">
       <div class="wrapper pt120">
         <Contacts />
       </div>

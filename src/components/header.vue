@@ -2,11 +2,11 @@
   <div class="header">
     <header class="grid wrapper">
       <nav class="header__nav column-9 text text--uppercase text--middle">
-        <router-link to="/">Главная</router-link>
-        <router-link to="/">о театре</router-link>
-        <router-link to="/">Наши постановки</router-link>
-        <router-link to="/">партнеры театра</router-link>
-        <router-link to="/">контакты</router-link>
+        <router-link to="#main">Главная</router-link>
+        <router-link to="#about">о театре</router-link>
+        <router-link to="#projects">Наши постановки</router-link>
+        <router-link to="#partners">партнеры театра</router-link>
+        <router-link to="#contacts">контакты</router-link>
       </nav>
       <div class="column-3 header__tel">
         <button class="mobile-only" @click="setShowMenu">
@@ -19,14 +19,13 @@
 </template>
 
 <script>
-
 export default {
   name: "header",
   methods: {
     setShowMenu() {
-      this.$store.commit('setShowMenu', true)
-    }
-  }
+      this.$store.commit("setShowMenu", true);
+    },
+  },
 };
 </script>
 
